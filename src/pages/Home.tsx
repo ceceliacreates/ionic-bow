@@ -8,22 +8,22 @@ import {
   IonTabButton,
   IonIcon,
   IonLabel,
-  IonBadge,
-} from "@ionic/react";
-import React, { useState } from "react";
-import ExploreContainer from "../components/ExploreContainer";
-import "./Home.css";
+  IonBadge
+} from '@ionic/react'
+import React, { useState } from 'react'
+import ExploreContainer from '../components/ExploreContainer'
+import './Home.css'
 import {
   personOutline,
   checkmarkDoneOutline,
-  heartOutline,
-} from "ionicons/icons";
+  heartOutline
+} from 'ionicons/icons'
 
 const Home: React.FC = () => {
-  const [route, setRoute] = useState("find");
+  const [route, setRoute] = useState('find')
 
-  function handleClick(route: any) {
-    setRoute(route);
+  function handleClick (route: any) {
+    setRoute(route)
   }
 
   return (
@@ -44,24 +44,24 @@ const Home: React.FC = () => {
         <ExploreContainer route={route} />
       </IonContent>
       <IonTabBar slot="bottom">
-        <IonTabButton tab="profile" onClick={() => handleClick("profile")}>
+        <IonTabButton tab="profile" onClick={() => handleClick('profile')}>
           <IonIcon icon={personOutline} />
           <IonLabel>Profile</IonLabel>
         </IonTabButton>
 
-        <IonTabButton tab="find" onClick={() => handleClick("find")}>
+        <IonTabButton tab="find" onClick={() => handleClick('find')}>
           <IonIcon icon={heartOutline} />
           <IonLabel>Find</IonLabel>
         </IonTabButton>
 
-        <IonTabButton tab="matches" onClick={() => handleClick("matches")}>
+        <IonTabButton tab="matches" onClick={() => handleClick('matches')}>
           <IonIcon icon={checkmarkDoneOutline} />
           <IonLabel>Matches</IonLabel>
           <IonBadge>6</IonBadge>
         </IonTabButton>
       </IonTabBar>
     </IonPage>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
