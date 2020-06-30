@@ -16,8 +16,8 @@ const FindPage: React.FC = () => {
       availableMatches.filter((match: {}) => match !== currentMatch)
     );
     setLikedMatches([...likedMatches, currentMatch]);
-    setcurrentMatch(availableMatches[0]);
-    setRoute("like");
+    setcurrentMatch(availableMatches[1]);
+    setRoute("find");
   }
 
   return (
