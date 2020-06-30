@@ -1,14 +1,29 @@
-import React from 'react';
-import './ExploreContainer.css';
+import React, { useState } from "react";
+import "./ExploreContainer.css";
+import FindPage from "../pages/Find";
+import MatchesPage from "../pages/Matches";
+import { IonContent } from "@ionic/react";
+import ProfilePage from "../pages/Profile";
 
-interface ContainerProps { }
+interface ContainerProps {
+  route: string;
+}
 
-const ExploreContainer: React.FC<ContainerProps> = () => {
+const ExploreContainer: React.FC<ContainerProps> = ({ route }) => {
   return (
-    <div className="container">
-      <strong>Ready to create an app?</strong>
-      <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-    </div>
+    <>
+      <IonContent>
+        {route === "find" ? (
+          <FindPage />
+        ) : route === "profile" ? (
+          <ProfilePage />
+        ) : route === "matches" ? (
+          <MatchesPage />
+        ) : (
+          <h2>Invalid Route</h2>
+        )}
+      </IonContent>
+    </>
   );
 };
 
