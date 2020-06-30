@@ -14,10 +14,6 @@ import React, { useState } from "react";
 import ExploreContainer from "../components/ExploreContainer";
 import "./Home.css";
 import {
-  calendar,
-  personCircle,
-  map,
-  informationCircle,
   personOutline,
   checkmarkDoneOutline,
   heartOutline,

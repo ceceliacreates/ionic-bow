@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./ExploreContainer.css";
 import FindPage from "../pages/Find";
 import MatchesPage from "../pages/Matches";
