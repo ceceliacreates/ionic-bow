@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 import {
   IonContent,
   IonCard,
@@ -7,26 +7,37 @@ import {
   IonCardTitle,
   IonImg,
   IonCardContent,
-  IonButton
-} from '@ionic/react'
-import traits from '../data/traits.json'
+  IonButton,
+} from "@ionic/react";
+import traits from "../data/traits.json";
 
-import shuffle from '../utils/shuffleArray'
+import shuffle from "../utils/shuffleArray";
 
-const shuffledTraits = shuffle(traits)
+const shuffledTraits = shuffle(traits);
 
 interface ContainerProps {
-  MatchHandler: () => void;
+  MatchHandler: (currentMatch: {}) => void;
+  currentMatch: {
+    id: number;
+    email: string;
+    username: string;
+    photo: string;
+    description: string;
+    traits: string[];
+  };
 }
 
-const LikeContainer: React.FC<ContainerProps> = ({ MatchHandler }) => {
-  const [selected, setSelected] = useState([] as any)
+const LikeContainer: React.FC<ContainerProps> = ({
+  MatchHandler,
+  currentMatch,
+}) => {
+  const [selected, setSelected] = useState([] as any);
 
-  function handleClick (trait: any) {
+  function handleClick(trait: any) {
     if (selected.includes(trait)) {
-      setSelected(selected.filter((item: string) => item !== trait))
+      setSelected(selected.filter((item: string) => item !== trait));
     } else {
-      setSelected(selected.length >= 3 ? selected : [...selected, trait])
+      setSelected(selected.length >= 3 ? selected : [...selected, trait]);
     }
   }
 
@@ -35,10 +46,10 @@ const LikeContainer: React.FC<ContainerProps> = ({ MatchHandler }) => {
       <IonCard>
         <IonCardHeader>
           <IonCardSubtitle>Awesome! You like:</IonCardSubtitle>
-          <IonCardTitle>CuriousKitten</IonCardTitle>
+          <IonCardTitle>{currentMatch.username}</IonCardTitle>
         </IonCardHeader>
 
-        <IonImg src="http://placekitten.com/g/400/400" />
+        <IonImg src={currentMatch.photo} />
       </IonCard>
       <IonCard class="ion-padding">
         <IonCardContent class="ion-text-center">
@@ -47,18 +58,18 @@ const LikeContainer: React.FC<ContainerProps> = ({ MatchHandler }) => {
 
         {shuffledTraits.map((trait: string) => (
           <IonButton
-            fill={selected.includes(trait) ? 'solid' : 'outline'}
+            fill={selected.includes(trait) ? "solid" : "outline"}
             onClick={() => handleClick(trait)}
           >
             {trait}
           </IonButton>
         ))}
       </IonCard>
-      <IonButton expand="full" onClick={() => MatchHandler()}>
+      <IonButton expand="full" onClick={() => MatchHandler(currentMatch)}>
         MATCH
       </IonButton>
     </IonContent>
-  )
-}
+  );
+};
 
-export default LikeContainer
+export default LikeContainer;

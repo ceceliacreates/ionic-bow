@@ -1,6 +1,5 @@
-import React from 'react'
+import React from "react";
 import {
-  IonContent,
   IonCard,
   IonCardHeader,
   IonCardSubtitle,
@@ -9,43 +8,48 @@ import {
   IonCardContent,
   IonItem,
   IonButton,
-  IonIcon
-} from '@ionic/react'
-import { closeCircleOutline, heart } from 'ionicons/icons'
-import LikeButtons from './LikeButtons'
+} from "@ionic/react";
+import LikeButtons from "./LikeButtons";
 
 interface ContainerProps {
   LikeHandler: () => void;
+  currentMatch: {
+    id: number;
+    email: string;
+    username: string;
+    photo: string;
+    description: string;
+    traits: string[];
+  };
 }
 
-const FindContainer: React.FC<ContainerProps> = ({ LikeHandler }) => {
+const FindContainer: React.FC<ContainerProps> = ({
+  LikeHandler,
+  currentMatch,
+}) => {
   return (
     <>
       <IonCard>
         <IonCardHeader>
           <IonCardSubtitle>5 miles away</IonCardSubtitle>
-          <IonCardTitle>Match name</IonCardTitle>
+          <IonCardTitle>{currentMatch.username}</IonCardTitle>
         </IonCardHeader>
-        <IonImg src="http://placekitten.com/g/400/400" />
-        <IonCardContent>
-          Keep close to Nature's heart... and break clear away, once in awhile,
-          and climb a mountain or spend a week in the woods. Wash your spirit
-          clean.
-        </IonCardContent>
+        <IonImg src={currentMatch.photo} />
+        <IonCardContent>{currentMatch.description}</IonCardContent>
       </IonCard>
       <IonCard>
         <IonCardHeader>
           <IonCardSubtitle>People find me:</IonCardSubtitle>
         </IonCardHeader>
         <IonItem>
-          <IonButton fill="outline">cute</IonButton>
-          <IonButton fill="outline">cuddly</IonButton>
-          <IonButton fill="outline">kind</IonButton>
+          {currentMatch.traits.map((trait: string) => (
+            <IonButton fill="outline">{trait}</IonButton>
+          ))}
         </IonItem>
       </IonCard>
       <LikeButtons LikeHandler={() => LikeHandler()} />
     </>
-  )
-}
+  );
+};
 
-export default FindContainer
+export default FindContainer;
