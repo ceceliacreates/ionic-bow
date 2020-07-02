@@ -17,6 +17,18 @@ Catch streams of this project at http://twitch.tv/ceceliacreates
 - A user can view their own profile
 - A user can edit their own profile
 
+#### To-Do
+
+- Add "Pass" functionality
+- Add traits select functionality
+- Add individual match view
+- Add traits view functionality
+- Add View Profile view
+- Add Edit Profile view
+- Add Profile functionality
+- Write e2e tests for MVP functionality
+- Write test to generate demo movie
+
 #### Notes
 
 - The MVP is client-side only

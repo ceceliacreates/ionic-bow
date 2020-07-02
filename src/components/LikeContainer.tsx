@@ -58,6 +58,7 @@ const LikeContainer: React.FC<ContainerProps> = ({
 
         {shuffledTraits.map((trait: string) => (
           <IonButton
+            data-cy={trait}
             fill={selected.includes(trait) ? "solid" : "outline"}
             onClick={() => handleClick(trait)}
           >
@@ -65,7 +66,11 @@ const LikeContainer: React.FC<ContainerProps> = ({
           </IonButton>
         ))}
       </IonCard>
-      <IonButton expand="full" onClick={() => MatchHandler(currentMatch)}>
+      <IonButton
+        data-cy="match-button"
+        expand="full"
+        onClick={() => MatchHandler(currentMatch)}
+      >
         MATCH
       </IonButton>
     </IonContent>

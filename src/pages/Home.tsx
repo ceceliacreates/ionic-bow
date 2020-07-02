@@ -54,7 +54,7 @@ const Home: React.FC = () => {
           <IonLabel>Find</IonLabel>
         </IonTabButton>
 
-        <IonTabButton tab="matches" onClick={() => handleClick("matches")}>
+        <IonTabButton tab="matches" data-cy="matches-tab" onClick={() => handleClick("matches")}>
           <IonIcon icon={checkmarkDoneOutline} />
           <IonLabel>Matches</IonLabel>
           <IonBadge>6</IonBadge>

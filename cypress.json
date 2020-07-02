@@ -1,0 +1,13 @@
+{
+  "baseUrl": "http://localhost:8100",
+  "viewportWidth": 375,
+  "viewportHeight": 812,
+  "nodeVersion": "system",
+  "env": {
+    "cypress-movie": {
+      "enabled": true,
+      "width": 375,
+      "height": 812
+    }
+  }
+}
