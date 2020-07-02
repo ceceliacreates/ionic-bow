@@ -53,7 +53,7 @@ const LikeContainer: React.FC<ContainerProps> = ({
       </IonCard>
       <IonCard class="ion-padding">
         <IonCardContent class="ion-text-center">
-          What do you like most about CuriousKitten? (Choose 3)
+          What do you like most about {currentMatch.username} (Choose 3)
         </IonCardContent>
 
         {shuffledTraits.map((trait: string) => (

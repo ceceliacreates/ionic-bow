@@ -5,7 +5,7 @@
     "username": "dbutfield0",
     "photo": "http://dummyimage.com/400x400.png/ff4444/ffffff",
     "description": "augue luctus tincidunt nulla mollis molestie lorem quisque ut erat curabitur gravida nisi at",
-    "traits": ["funny", "outgoing", "cute"]
+    "traits": ["fun", "outgoing", "easygoing"]
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "username": "gdrewson1",
     "photo": "http://dummyimage.com/400x400.png/dddddd/000000",
     "description": "morbi non lectus aliquam sit amet diam in magna bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt",
-    "traits": ["creative", "funny", "successful"]
+    "traits": ["outgoing", "family-oriented", "cute"]
   },
   {
     "id": 3,
@@ -21,7 +21,7 @@
     "username": "adranfield2",
     "photo": "http://dummyimage.com/400x400.png/ff4444/ffffff",
     "description": "tellus nulla ut erat id mauris",
-    "traits": ["family-oriented", "smart", "successful"]
+    "traits": ["kind", "funny", "successful"]
   },
   {
     "id": 4,
@@ -29,7 +29,7 @@
     "username": "nchesshire3",
     "photo": "http://dummyimage.com/400x400.png/5fa2dd/ffffff",
     "description": "natoque penatibus et magnis dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum neque aenean",
-    "traits": ["passionate", "creative", "cute"]
+    "traits": ["cute", "fun", "hot"]
   },
   {
     "id": 5,
@@ -37,7 +37,7 @@
     "username": "esevier4",
     "photo": "http://dummyimage.com/400x400.png/ff4444/ffffff",
     "description": "amet sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae",
-    "traits": ["hot", "funny", "spiritual"]
+    "traits": ["creative", "easygoing", "successful"]
   },
   {
     "id": 6,
@@ -45,7 +45,7 @@
     "username": "cnerger5",
     "photo": "http://dummyimage.com/400x400.png/ff4444/ffffff",
     "description": "vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis in",
-    "traits": ["kind", "fun", "driven"]
+    "traits": ["funny", "successful", "outgoing"]
   },
   {
     "id": 7,
@@ -53,7 +53,7 @@
     "username": "lauchinleck6",
     "photo": "http://dummyimage.com/400x400.png/ff4444/ffffff",
     "description": "in libero ut massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt in leo maecenas",
-    "traits": ["fun", "easygoing", "kind"]
+    "traits": ["family-oriented", "successful", "fun"]
   },
   {
     "id": 8,
@@ -61,7 +61,7 @@
     "username": "sebsworth7",
     "photo": "http://dummyimage.com/400x400.png/dddddd/000000",
     "description": "in congue etiam justo etiam pretium iaculis justo in hac",
-    "traits": ["easygoing", "driven", "cute"]
+    "traits": ["driven", "kind", "easygoing"]
   },
   {
     "id": 9,
@@ -69,7 +69,7 @@
     "username": "mcholdcroft8",
     "photo": "http://dummyimage.com/400x400.png/dddddd/000000",
     "description": "quis turpis sed ante vivamus tortor duis mattis egestas",
-    "traits": ["hot", "outgoing", "smart"]
+    "traits": ["easygoing", "family-oriented", "successful"]
   },
   {
     "id": 10,
@@ -77,7 +77,7 @@
     "username": "egoschalk9",
     "photo": "http://dummyimage.com/400x400.png/5fa2dd/ffffff",
     "description": "luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis",
-    "traits": ["successful", "spiritual", "funny"]
+    "traits": ["driven", "fun", "outgoing"]
   },
   {
     "id": 11,
@@ -85,7 +85,7 @@
     "username": "omaniona",
     "photo": "http://dummyimage.com/400x400.png/5fa2dd/ffffff",
     "description": "consequat ut nulla sed accumsan",
-    "traits": ["spiritual", "funny", "family-oriented"]
+    "traits": ["passionate", "smart", "cute"]
   },
   {
     "id": 12,
@@ -93,7 +93,7 @@
     "username": "cmooringb",
     "photo": "http://dummyimage.com/400x400.png/5fa2dd/ffffff",
     "description": "odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit",
-    "traits": ["hot", "smart", "creative"]
+    "traits": ["funny", "spiritual", "kind"]
   },
   {
     "id": 13,
@@ -101,7 +101,7 @@
     "username": "afairestc",
     "photo": "http://dummyimage.com/400x400.png/dddddd/000000",
     "description": "sapien a libero nam dui proin leo odio porttitor",
-    "traits": ["easygoing", "family-oriented", "hot"]
+    "traits": ["easygoing", "creative", "family-oriented"]
   },
   {
     "id": 14,
@@ -109,7 +109,7 @@
     "username": "nabbed",
     "photo": "http://dummyimage.com/400x400.png/dddddd/000000",
     "description": "diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris",
-    "traits": ["spiritual", "family-oriented", "passionate"]
+    "traits": ["spiritual", "driven", "smart"]
   },
   {
     "id": 15,
@@ -117,7 +117,7 @@
     "username": "crailtone",
     "photo": "http://dummyimage.com/400x400.png/5fa2dd/ffffff",
     "description": "pellentesque viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est et",
-    "traits": ["passionate", "spiritual", "funny"]
+    "traits": ["outgoing", "smart", "passionate"]
   },
   {
     "id": 16,
@@ -125,7 +125,7 @@
     "username": "cminetf",
     "photo": "http://dummyimage.com/400x400.png/ff4444/ffffff",
     "description": "tortor quis turpis sed ante vivamus tortor duis mattis egestas metus aenean fermentum donec ut",
-    "traits": ["family-oriented", "funny", "hot"]
+    "traits": ["family-oriented", "hot", "creative"]
   },
   {
     "id": 17,
@@ -133,7 +133,7 @@
     "username": "cleeleg",
     "photo": "http://dummyimage.com/400x400.png/cc0000/ffffff",
     "description": "lacinia eget tincidunt eget tempus vel pede morbi porttitor lorem",
-    "traits": ["successful", "outgoing", "hot"]
+    "traits": ["family-oriented", "smart", "funny"]
   },
   {
     "id": 18,
@@ -141,7 +141,7 @@
     "username": "jlexah",
     "photo": "http://dummyimage.com/400x400.png/cc0000/ffffff",
     "description": "curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non",
-    "traits": ["creative", "hot", "successful"]
+    "traits": ["successful", "smart", "hot"]
   },
   {
     "id": 19,
@@ -149,7 +149,7 @@
     "username": "kgethingsi",
     "photo": "http://dummyimage.com/400x400.png/cc0000/ffffff",
     "description": "mollis molestie lorem quisque ut erat curabitur gravida nisi at nibh in",
-    "traits": ["creative", "family-oriented", "funny"]
+    "traits": ["driven", "hot", "family-oriented"]
   },
   {
     "id": 20,
@@ -157,7 +157,7 @@
     "username": "lblackadderj",
     "photo": "http://dummyimage.com/400x400.png/ff4444/ffffff",
     "description": "curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac",
-    "traits": ["successful", "family-oriented", "spiritual"]
+    "traits": ["fun", "funny", "successful"]
   },
   {
     "id": 21,
@@ -165,7 +165,7 @@
     "username": "iroek",
     "photo": "http://dummyimage.com/400x400.png/ff4444/ffffff",
     "description": "proin leo odio porttitor id consequat in consequat ut nulla sed accumsan felis ut at dolor quis odio consequat",
-    "traits": ["outgoing", "creative", "smart"]
+    "traits": ["family-oriented", "spiritual", "outgoing"]
   },
   {
     "id": 22,
@@ -173,7 +173,7 @@
     "username": "ccaustonl",
     "photo": "http://dummyimage.com/400x400.png/ff4444/ffffff",
     "description": "massa id nisl venenatis lacinia aenean sit",
-    "traits": ["spiritual", "creative", "cute"]
+    "traits": ["outgoing", "fun", "creative"]
   },
   {
     "id": 23,
@@ -181,7 +181,7 @@
     "username": "gmerredym",
     "photo": "http://dummyimage.com/400x400.png/dddddd/000000",
     "description": "risus semper porta volutpat quam pede",
-    "traits": ["funny", "driven", "kind"]
+    "traits": ["smart", "outgoing", "kind"]
   },
   {
     "id": 24,
@@ -189,7 +189,7 @@
     "username": "dellsn",
     "photo": "http://dummyimage.com/400x400.png/5fa2dd/ffffff",
     "description": "mauris ullamcorper purus sit amet nulla quisque arcu libero rutrum ac",
-    "traits": ["family-oriented", "spiritual", "successful"]
+    "traits": ["smart", "driven", "hot"]
   },
   {
     "id": 25,
@@ -197,6 +197,6 @@
     "username": "laggso",
     "photo": "http://dummyimage.com/400x400.png/ff4444/ffffff",
     "description": "nam dui proin leo odio porttitor id consequat in consequat ut nulla sed accumsan",
-    "traits": ["spiritual", "driven", "kind"]
+    "traits": ["funny", "family-oriented", "spiritual"]
   }
 ]

@@ -11,7 +11,6 @@ const FindPage: React.FC = () => {
   const [likedMatches, setLikedMatches] = useState([] as any);
 
   function MatchHandler(currentMatch: {}) {
-    console.log("matchhandler hits");
     setAvailableMatches(
       availableMatches.filter((match: {}) => match !== currentMatch)
     );
