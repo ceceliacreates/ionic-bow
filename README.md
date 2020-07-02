@@ -8,6 +8,8 @@ Catch streams of this project at http://twitch.tv/ceceliacreates
 
 Episode 1: [App overview, Find functionality & setting up Cypress tests](https://www.twitch.tv/videos/667495522)
 
+![App demo](./critical-pathspecjs.gif)
+
 ### MVP functionality
 
 - A user can view potential matches and choose to "Pass" or "Like"
