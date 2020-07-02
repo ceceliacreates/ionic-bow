@@ -11,7 +11,7 @@ import {
   IonBadge,
 } from "@ionic/react";
 import React, { useState } from "react";
-import ExploreContainer from "../components/ExploreContainer";
+import ExploreContainer from "../components/MainContainer";
 import "./Home.css";
 import {
   personOutline,

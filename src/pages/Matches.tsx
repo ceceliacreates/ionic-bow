@@ -1,12 +1,43 @@
-import React from 'react'
-import { IonContent } from '@ionic/react'
+import React from "react";
+import {
+  IonContent,
+  IonList,
+  IonItem,
+  IonLabel,
+  IonAvatar,
+} from "@ionic/react";
 
-const MatchesPage: React.FC = () => {
-  return (
-    <IonContent class="ion-text-center">
-      <h1>No Matches Found</h1>
-    </IonContent>
-  )
+interface PageProps {
+  likedMatches: [];
 }
 
-export default MatchesPage
+const MatchesPage: React.FC<PageProps> = ({ likedMatches }) => {
+  return (
+    <IonContent class="ion-text-center">
+      <IonList>
+        {likedMatches.map(
+          (match: {
+            id: number;
+            email: string;
+            username: string;
+            photo: string;
+            description: string;
+            traits: string[];
+          }) => (
+            <IonItem>
+              <IonAvatar slot="start">
+                <img src={match.photo}></img>
+              </IonAvatar>
+              <IonLabel>
+                <h2>{match.username}</h2>
+                <p>{match.description}</p>
+              </IonLabel>
+            </IonItem>
+          )
+        )}
+      </IonList>
+    </IonContent>
+  );
+};
+
+export default MatchesPage;

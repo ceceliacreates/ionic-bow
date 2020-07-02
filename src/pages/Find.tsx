@@ -4,11 +4,16 @@ import LikeContainer from "../components/LikeContainer";
 import FindContainer from "../components/FindContainer";
 import users from "../data/users.json";
 
-const FindPage: React.FC = () => {
+interface PageProps {
+  setLikedMatches: ([]) => void,
+  likedMatches: [],
+}
+
+const FindPage: React.FC<PageProps> = ({setLikedMatches, likedMatches}) => {
   const [route, setRoute] = useState("find");
   const [availableMatches, setAvailableMatches] = useState(users);
   const [currentMatch, setcurrentMatch] = useState(availableMatches[0]);
-  const [likedMatches, setLikedMatches] = useState([] as any);
+  
 
   function MatchHandler(currentMatch: {}) {
     setAvailableMatches(
