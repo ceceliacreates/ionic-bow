@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   IonContent,
   IonList,
@@ -6,36 +6,50 @@ import {
   IonLabel,
   IonAvatar,
 } from "@ionic/react";
+import MatchListContainer from "../components/MatchListContainer";
+import MatchViewContainer from "../components/MatchViewContainer";
 
 interface PageProps {
-  likedMatches: [];
+  likedMatches: any[];
 }
 
 const MatchesPage: React.FC<PageProps> = ({ likedMatches }) => {
+  /// need to allow for null to be set initially as selectedMatch in typescript, in the meantime this is a stopgap
+  const placeholderMatch = {
+    id: 0,
+    email: "email",
+    username: "username",
+    photo: "url",
+    description: "description",
+    traits: ["smart", "funny", "sarcastic"],
+  };
+
+  if (likedMatches.length === 0) {
+    likedMatches[0] = placeholderMatch;
+  }
+
+  const [route, setRoute] = useState("list");
+  const [selectedMatch, setSelectedMatch] = useState(likedMatches[0]);
+
+  function SelectHandler(selectedMatch: {}) {
+    console.log(selectedMatch);
+    setSelectedMatch(selectedMatch);
+    setRoute("match");
+  }
+
   return (
     <IonContent class="ion-text-center">
-      <IonList>
-        {likedMatches.map(
-          (match: {
-            id: number;
-            email: string;
-            username: string;
-            photo: string;
-            description: string;
-            traits: string[];
-          }) => (
-            <IonItem>
-              <IonAvatar slot="start">
-                <img src={match.photo}></img>
-              </IonAvatar>
-              <IonLabel>
-                <h2>{match.username}</h2>
-                <p>{match.description}</p>
-              </IonLabel>
-            </IonItem>
-          )
-        )}
-      </IonList>
+      {route === "list" ? (
+        <MatchListContainer
+          likedMatches={likedMatches}
+          SelectHandler={SelectHandler}
+        />
+      ) : route === "match" ? (
+        <MatchViewContainer
+          selectedMatch={selectedMatch}
+          BackHandler={() => setRoute("list")}
+        />
+      ) : null}
     </IonContent>
   );
 };

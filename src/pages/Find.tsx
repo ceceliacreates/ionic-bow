@@ -5,15 +5,14 @@ import FindContainer from "../components/FindContainer";
 import users from "../data/users.json";
 
 interface PageProps {
-  setLikedMatches: ([]) => void,
-  likedMatches: [],
+  setLikedMatches: ([]) => void;
+  likedMatches: [];
 }
 
-const FindPage: React.FC<PageProps> = ({setLikedMatches, likedMatches}) => {
+const FindPage: React.FC<PageProps> = ({ setLikedMatches, likedMatches }) => {
   const [route, setRoute] = useState("find");
   const [availableMatches, setAvailableMatches] = useState(users);
   const [currentMatch, setcurrentMatch] = useState(availableMatches[0]);
-  
 
   function MatchHandler(currentMatch: {}) {
     setAvailableMatches(
@@ -24,12 +23,21 @@ const FindPage: React.FC<PageProps> = ({setLikedMatches, likedMatches}) => {
     setRoute("find");
   }
 
+  function PassHandler(currentMatch: {}) {
+    console.log(currentMatch);
+    setAvailableMatches(
+      availableMatches.filter((match: {}) => match !== currentMatch)
+    );
+    setcurrentMatch(availableMatches[1]);
+  }
+
   return (
     <IonContent>
       {route === "find" ? (
         <FindContainer
           LikeHandler={() => setRoute("like")}
           currentMatch={currentMatch}
+          PassHandler={PassHandler}
         />
       ) : (
         <LikeContainer

@@ -4,12 +4,25 @@ import { closeCircleOutline, heart } from "ionicons/icons";
 
 interface ButtonProps {
   LikeHandler: () => void;
+  PassHandler: (match: {}) => void;
+  currentMatch: {
+    id: number;
+    email: string;
+    username: string;
+    photo: string;
+    description: string;
+    traits: string[];
+  };
 }
 
-const LikeButtons: React.FC<ButtonProps> = ({ LikeHandler }) => {
+const LikeButtons: React.FC<ButtonProps> = ({
+  LikeHandler,
+  PassHandler,
+  currentMatch,
+}) => {
   return (
     <IonCard class="ion-text-center">
-      <IonButton fill="clear">
+      <IonButton fill="clear" onClick={() => PassHandler(currentMatch)}>
         <IonIcon icon={closeCircleOutline} size="large"></IonIcon>Pass
       </IonButton>
       <IonButton

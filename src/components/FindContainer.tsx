@@ -10,9 +10,11 @@ import {
   IonButton,
 } from "@ionic/react";
 import LikeButtons from "./LikeButtons";
+import MatchCard from "./MatchCard";
 
 interface ContainerProps {
   LikeHandler: () => void;
+  PassHandler: (match: {}) => void;
   currentMatch: {
     id: number;
     email: string;
@@ -25,29 +27,17 @@ interface ContainerProps {
 
 const FindContainer: React.FC<ContainerProps> = ({
   LikeHandler,
+  PassHandler,
   currentMatch,
 }) => {
   return (
     <>
-      <IonCard>
-        <IonCardHeader>
-          <IonCardSubtitle>5 miles away</IonCardSubtitle>
-          <IonCardTitle>{currentMatch.username}</IonCardTitle>
-        </IonCardHeader>
-        <IonImg src={currentMatch.photo} />
-        <IonCardContent>{currentMatch.description}</IonCardContent>
-      </IonCard>
-      <IonCard>
-        <IonCardHeader>
-          <IonCardSubtitle>People find me:</IonCardSubtitle>
-        </IonCardHeader>
-        <IonItem>
-          {currentMatch.traits.map((trait: string) => (
-            <IonButton fill="outline">{trait}</IonButton>
-          ))}
-        </IonItem>
-      </IonCard>
-      <LikeButtons LikeHandler={() => LikeHandler()} />
+      <MatchCard match={currentMatch} />
+      <LikeButtons
+        LikeHandler={() => LikeHandler()}
+        PassHandler={PassHandler}
+        currentMatch={currentMatch}
+      />
     </>
   );
 };
