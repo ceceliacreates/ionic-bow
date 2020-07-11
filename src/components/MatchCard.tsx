@@ -27,7 +27,7 @@ const MatchCard: React.FC<CardProps> = ({ match }) => {
       <IonCard>
         <IonCardHeader>
           <IonCardSubtitle>5 miles away</IonCardSubtitle>
-          <IonCardTitle>{match.username}</IonCardTitle>
+          <IonCardTitle data-cy="match-username">{match.username}</IonCardTitle>
         </IonCardHeader>
         <IonImg src={match.photo} />
         <IonCardContent>{match.description}</IonCardContent>

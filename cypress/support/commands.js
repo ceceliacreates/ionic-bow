@@ -69,3 +69,15 @@ const clearViewport = () => {
 };
 
 Cypress.Commands.add("clearViewport", clearViewport);
+
+Cypress.Commands.add("likeMatch", () => {
+  cy.get("[data-cy=like-button]").click();
+  cy.get("[data-cy=easygoing]").click();
+  cy.get("[data-cy=smart]").click();
+  cy.get("[data-cy=creative]").click();
+  cy.get("[data-cy=match-button]").click();
+});
+
+Cypress.Commands.add("passMatch", () => {
+  cy.get("[data-cy=pass-button]").click();
+});

@@ -2,17 +2,33 @@ import React, { useState } from "react";
 import { IonContent } from "@ionic/react";
 import LikeContainer from "../components/LikeContainer";
 import FindContainer from "../components/FindContainer";
-import users from "../data/users.json";
 
 interface PageProps {
   setLikedMatches: ([]) => void;
   likedMatches: [];
+  setAvailableMatches: ([]) => void;
+  availableMatches: {
+    id: number;
+    email: string;
+    username: string;
+    photo: string;
+    description: string;
+    traits: string[];
+  }[];
 }
 
-const FindPage: React.FC<PageProps> = ({ setLikedMatches, likedMatches }) => {
+const FindPage: React.FC<PageProps> = ({
+  setLikedMatches,
+  likedMatches,
+  setAvailableMatches,
+  availableMatches,
+}) => {
   const [route, setRoute] = useState("find");
-  const [availableMatches, setAvailableMatches] = useState(users);
   const [currentMatch, setcurrentMatch] = useState(availableMatches[0]);
+
+  function LikeHandler() {
+    setRoute("like");
+  }
 
   function MatchHandler(currentMatch: {}) {
     setAvailableMatches(
@@ -35,7 +51,7 @@ const FindPage: React.FC<PageProps> = ({ setLikedMatches, likedMatches }) => {
     <IonContent>
       {route === "find" ? (
         <FindContainer
-          LikeHandler={() => setRoute("like")}
+          LikeHandler={() => LikeHandler()}
           currentMatch={currentMatch}
           PassHandler={PassHandler}
         />
