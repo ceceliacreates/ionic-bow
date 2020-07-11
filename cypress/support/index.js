@@ -18,10 +18,11 @@
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 import { slowDownCommands } from "./commands";
-
-slowDownCommands();
-before(() => {
-  if (Cypress.browser.isHeadless) {
-    cy.clearViewport();
-  }
-});
+import "./commands";
+// -- Uncomment for cypress-movie
+// slowDownCommands();
+// before(() => {
+//   if (Cypress.browser.isHeadless) {
+//     cy.clearViewport();
+//   }
+// });

@@ -22,7 +22,11 @@ const LikeButtons: React.FC<ButtonProps> = ({
 }) => {
   return (
     <IonCard class="ion-text-center">
-      <IonButton fill="clear" onClick={() => PassHandler(currentMatch)}>
+      <IonButton
+        data-cy="pass-button"
+        fill="clear"
+        onClick={() => PassHandler(currentMatch)}
+      >
         <IonIcon icon={closeCircleOutline} size="large"></IonIcon>Pass
       </IonButton>
       <IonButton

@@ -4,6 +4,7 @@ import FindPage from "../pages/Find";
 import MatchesPage from "../pages/Matches";
 import { IonContent } from "@ionic/react";
 import ProfilePage from "../pages/Profile";
+import users from "../data/users.json";
 
 interface ContainerProps {
   route: string;
@@ -11,6 +12,7 @@ interface ContainerProps {
 
 const MainContainer: React.FC<ContainerProps> = ({ route }) => {
   const [likedMatches, setLikedMatches] = useState([] as any);
+  const [availableMatches, setAvailableMatches] = useState(users);
 
   return (
     <IonContent>
@@ -18,6 +20,8 @@ const MainContainer: React.FC<ContainerProps> = ({ route }) => {
         <FindPage
           likedMatches={likedMatches}
           setLikedMatches={setLikedMatches}
+          availableMatches={availableMatches}
+          setAvailableMatches={setAvailableMatches}
         />
       ) : route === "profile" ? (
         <ProfilePage />

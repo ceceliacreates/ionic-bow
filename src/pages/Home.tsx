@@ -44,17 +44,29 @@ const Home: React.FC = () => {
         <ExploreContainer route={route} />
       </IonContent>
       <IonTabBar slot="bottom">
-        <IonTabButton tab="profile" onClick={() => handleClick("profile")}>
+        <IonTabButton
+          tab="profile"
+          data-cy="profile-tab"
+          onClick={() => handleClick("profile")}
+        >
           <IonIcon icon={personOutline} />
           <IonLabel>Profile</IonLabel>
         </IonTabButton>
 
-        <IonTabButton tab="find" onClick={() => handleClick("find")}>
+        <IonTabButton
+          tab="find"
+          data-cy="find-tab"
+          onClick={() => handleClick("find")}
+        >
           <IonIcon icon={heartOutline} />
           <IonLabel>Find</IonLabel>
         </IonTabButton>
 
-        <IonTabButton tab="matches" data-cy="matches-tab" onClick={() => handleClick("matches")}>
+        <IonTabButton
+          tab="matches"
+          data-cy="matches-tab"
+          onClick={() => handleClick("matches")}
+        >
           <IonIcon icon={checkmarkDoneOutline} />
           <IonLabel>Matches</IonLabel>
           <IonBadge>6</IonBadge>
