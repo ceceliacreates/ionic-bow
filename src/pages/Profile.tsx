@@ -1,12 +1,27 @@
-import React from 'react'
-import { IonContent } from '@ionic/react'
+import React, { useState } from "react";
+import { IonContent } from "@ionic/react";
+import ViewProfileContainer from "../components/ViewProfileContainer";
+import EditProfileContainer from "../components/EditProfileContainer";
 
 const ProfilePage: React.FC = () => {
-  return (
-    <IonContent class="ion-text-center">
-      <h1>Profile Page</h1>
-    </IonContent>
-  )
-}
+  const [route, setRoute] = useState("view");
 
-export default ProfilePage
+  function EditHandler() {
+    setRoute("edit");
+  }
+
+  function ViewHandler() {
+    setRoute("view");
+  }
+  return (
+    <IonContent>
+      {route === "view" ? (
+        <ViewProfileContainer EditHandler={() => EditHandler()} />
+      ) : (
+        <EditProfileContainer ViewHandler={() => ViewHandler()} />
+      )}
+    </IonContent>
+  );
+};
+
+export default ProfilePage;
