@@ -28,6 +28,13 @@ describe("critical path tests", () => {
     cy.contains(users[2].username).should("not.exist");
     cy.contains(users[3].username).should("not.exist");
 
+    // liked match should have correct traits
+
+    cy.getBySel("match").first().click();
+    cy.contains("easygoing");
+    cy.contains("smart");
+    cy.contains("creative");
+
     // Navigating back to the Find tab should show the next available match
     cy.get("[data-cy=find-tab]").click();
     cy.contains(users[5].username);

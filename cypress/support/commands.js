@@ -81,3 +81,7 @@ Cypress.Commands.add("likeMatch", () => {
 Cypress.Commands.add("passMatch", () => {
   cy.get("[data-cy=pass-button]").click();
 });
+
+Cypress.Commands.add("getBySel", (selector, ...args) => {
+  return cy.get(`[data-cy=${selector}]`, ...args);
+});

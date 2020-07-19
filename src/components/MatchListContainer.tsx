@@ -22,7 +22,7 @@ const MatchListContainer: React.FC<ContainerProps> = ({
             description: string;
             traits: string[];
           }) => (
-            <IonItem onClick={() => SelectHandler(match)}>
+            <IonItem data-cy="match" onClick={() => SelectHandler(match)}>
               <IonAvatar slot="start">
                 <img src={match.photo}></img>
               </IonAvatar>

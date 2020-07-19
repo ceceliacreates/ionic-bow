@@ -33,12 +33,21 @@ const LikeContainer: React.FC<ContainerProps> = ({
 }) => {
   const [selected, setSelected] = useState([] as any);
 
-  function handleClick(trait: any) {
+  function handleTraitClick(trait: any) {
     if (selected.includes(trait)) {
       setSelected(selected.filter((item: string) => item !== trait));
     } else {
       setSelected(selected.length >= 3 ? selected : [...selected, trait]);
     }
+  }
+
+  function setTraits(traits: []) {
+    currentMatch.traits = traits;
+  }
+
+  function handleMatchClick() {
+    setTraits(selected);
+    MatchHandler(currentMatch);
   }
 
   return (
@@ -60,7 +69,7 @@ const LikeContainer: React.FC<ContainerProps> = ({
           <IonButton
             data-cy={trait}
             fill={selected.includes(trait) ? "solid" : "outline"}
-            onClick={() => handleClick(trait)}
+            onClick={() => handleTraitClick(trait)}
           >
             {trait}
           </IonButton>
@@ -69,7 +78,7 @@ const LikeContainer: React.FC<ContainerProps> = ({
       <IonButton
         data-cy="match-button"
         expand="full"
-        onClick={() => MatchHandler(currentMatch)}
+        onClick={() => handleMatchClick()}
       >
         MATCH
       </IonButton>
