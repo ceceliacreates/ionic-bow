@@ -27,8 +27,8 @@ Episode 1: [App overview, Find functionality & setting up Cypress tests](https:/
 - Add traits select functionality ✅
 - Add individual match view ✅
 - Add traits view functionality ✅
-- Add View Profile view
-- Add Edit Profile view
+- Add View Profile view ✅
+- Add Edit Profile view ✅
 - Add Profile functionality
 - Write e2e tests for MVP functionality
 - Write test to generate demo movie
