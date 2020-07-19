@@ -20,15 +20,18 @@ describe("critical path tests", () => {
     cy.contains(users[4].username);
     cy.likeMatch();
 
-    // liked matches should appear on Matches list
+    // liked matches should appear on Matches list and have correct traits
     cy.get("[data-cy=matches-tab]").click();
     cy.contains(users[0].username);
     cy.contains(users[1].username);
     cy.contains(users[4].username);
+    cy.contains("easygoing");
+    cy.contains("smart");
+    cy.contains("creative");
     cy.contains(users[2].username).should("not.exist");
     cy.contains(users[3].username).should("not.exist");
 
-    // liked match should have correct traits
+    // liked match should have correct traits within individual view
 
     cy.getBySel("match").first().click();
     cy.contains("easygoing");

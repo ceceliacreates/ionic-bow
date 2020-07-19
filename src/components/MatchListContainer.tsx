@@ -1,5 +1,5 @@
 import React from "react";
-import { IonList, IonItem, IonAvatar, IonLabel } from "@ionic/react";
+import { IonList, IonItem, IonAvatar, IonLabel, IonButton } from "@ionic/react";
 
 interface ContainerProps {
   likedMatches: any[];
@@ -26,8 +26,13 @@ const MatchListContainer: React.FC<ContainerProps> = ({
               <IonAvatar slot="start">
                 <img src={match.photo}></img>
               </IonAvatar>
-              <IonLabel>
+              <IonLabel class="ion-text-wrap">
                 <h2>{match.username}</h2>
+                {match.traits.map((trait) => (
+                  <IonButton color="secondary" fill="outline">
+                    {trait}
+                  </IonButton>
+                ))}
                 <p>{match.description}</p>
               </IonLabel>
             </IonItem>

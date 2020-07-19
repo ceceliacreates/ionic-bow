@@ -24,9 +24,9 @@ Episode 1: [App overview, Find functionality & setting up Cypress tests](https:/
 #### To-Do
 
 - Add "Pass" functionality ✅
-- Add traits select functionality
-- Add individual match view
-- Add traits view functionality
+- Add traits select functionality ✅
+- Add individual match view ✅
+- Add traits view functionality ✅
 - Add View Profile view
 - Add Edit Profile view
 - Add Profile functionality
